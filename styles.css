@@ -1,0 +1,208 @@
+/* Main container styles */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #3b82f6, #7f1d1d);
+    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .clock-panel {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Time display styles */
+  .time-display {
+    font-size: 3.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .date-display {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button styles */
+  .timezone-toggle {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(156, 163, 175, 0.6);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .timezone-toggle:hover {
+    background-color: rgba(31, 41, 55, 0.8);
+  }
+  
+  .calendar-toggle {
+    padding: 0.5rem 1rem;
+    background-color: rgb(37, 99, 235);
+    border-radius: 9999px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+  }
+  
+  .calendar-toggle:hover {
+    background-color: rgb(29, 78, 216);
+  }
+  
+  /* Calendar styles */
+  .calendar-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    background-color: rgb(17, 24, 39);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    color: white;
+    border: 1px solid rgb(55, 65, 81);
+    width: 16rem;
+  }
+  
+  .month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .month-button {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .month-button:hover {
+    background-color: rgb(55, 65, 81);
+  }
+  
+  .month-display {
+    text-align: center;
+  }
+  
+  .month-name {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  
+  .year-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  
+  .weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .weekday {
+    color: rgb(156, 163, 175);
+  }
+  
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+    justify-items: center;
+  }
+  
+  .day-cell {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  .day-cell:hover {
+    background-color: rgb(96, 165, 250);
+    color: black;
+  }
+  
+  .day-today {
+    background-color: rgb(37, 99, 235);
+    color: white;
+  }
+  
+  .day-selected {
+    background-color: rgb(59, 130, 246);
+    color: white;
+  }
+  
+  .today-button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(37, 99, 235);
+    border-radius: 0.25rem;
+    color: white;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+  }
+  
+  .today-button:hover {
+    background-color: rgb(29, 78, 216);
+  }
+  
+  /* Timezone selector styles */
+  .timezone-container {
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: rgb(17, 24, 39);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    color: white;
+    max-height: 15rem;
+    overflow-y: auto;
+    width: 12rem;
+    border: 1px solid rgb(55, 65, 81);
+  }
+  
+  .timezone-option {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .timezone-option:hover {
+    background-color: rgb(55, 65, 81);
+  }
+  
+  .timezone-selected {
+    background-color: rgb(37, 99, 235);
+  }

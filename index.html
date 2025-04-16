@@ -8,45 +8,11 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="root"></div>
   
-  <script type="text/babel">
-    function Clock() {
-      const [time, setTime] = React.useState(new Date());
-      
-      React.useEffect(() => {
-        const timer = setInterval(() => {
-          setTime(new Date());
-        }, 1000);
-        
-        return () => clearInterval(timer);
-      }, []);
-      
-      const formatTime = (date) => {
-        const hours = date.getHours().toString().padStart(2, '0');
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-        const seconds = date.getSeconds().toString().padStart(2, '0');
-        return `${hours}:${minutes}:${seconds}`;
-      };
-      
-      const formatDate = (date) => {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return date.toLocaleDateString(undefined, options);
-      };
-      
-      return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 to-red-900 text-white">
-          <div className="bg-black bg-opacity-50 p-8 rounded-xl shadow-2xl">
-            <h1 className="text-6xl font-bold mb-4 text-center">{formatTime(time)}</h1>
-            <p className="text-xl text-center">{formatDate(time)}</p>
-          </div>
-        </div>
-      );
-    }
-    
-    ReactDOM.render(<Clock />, document.getElementById('root'));
-  </script>
+  <script type="text/babel" src="clock.js"></script>
 </body>
 </html>
